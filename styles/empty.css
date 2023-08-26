@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    color: #737373;
+    padding: 24px;
+    font-size: 1.6rem;
+    background: #FAFAFA;
+}
+
+button {
+    background-color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    padding: 11px 27px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+/* HEADER *********************************************************** */
+
+header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 16px 24px;
+    font-weight: 600;
+}
+
+.logo-desktop {
+    cursor: pointer;
+}
+
+.logo-mobile {
+    cursor: pointer;
+    display: none;
+}
+
+header div {
+    display: flex;
+    gap: 16px;
+}
+
+header div button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    transition: ease-in-out .2s;
+}
+
+header div button:hover {
+    color: #633CFF;
+    background: #EFEBFF;
+}
+
+header div button:hover svg path {
+    fill: #633CFF;
+    background: #EFEBFF;
+}
+
+header div button:focus {
+    color: #633CFF;
+    background: #EFEBFF;
+}
+
+header div button:focus svg path {
+    fill: #633CFF;
+    background: #EFEBFF;
+}
+
+header button:nth-child(4) {
+    color: #633CFF;
+    padding: 11px 27px;
+    border: solid 1px #633CFF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+header button:nth-child(4):active {
+    background: #EFEBFF;
+}
+
+.preview {
+    display: none;
+}
+
+/* MAIN **************************************************************** */
+/* first section */
+
+main {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    margin-top: 24px;
+    grid-column-gap: 24px;
+}
+
+section:nth-child(1) {
+    padding: 101.5px 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* second section---Links */
+
+section:nth-child(2) {
+    padding: 40px;
+    background: white;
+}
+
+main h2 {
+    color: #333;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.add-links-customize p {
+    margin-top: 8px;
+}
+
+.add-links {
+    margin-top: 40px;
+}
+
+.add-links button {
+    width: 100%;
+    color: #633CFF;
+    font-weight: 600;
+    border: solid 1px #633CFF;
+}
+
+.add-links button:active {
+    background: #EFEBFF;
+}
+
+.add-links-description {
+    border-radius: 12px;
+    background: #FAFAFA;
+    text-align: center;
+    margin-top: 66.5px;
+    padding: 20px;
+}
+
+
+.add-links-instruction {
+    max-width: 488px;
+    margin: 40px auto 42.5px;
+}
+
+.add-links-instruction p {
+    margin-top: 24px;
+}
+
+.save {
+    text-align: right;
+    padding: 24px 40px 24px 0;
+    margin-top: 43.5px;
+    border-top: solid #D9D9D9 1px;
+}
+
+.save button {
+    background: #633CFF;
+    opacity: 0.25;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    border: none;
+    color: white;
+}
+
+/* second section---profile details */
+
+.profile-details {
+    display: none;
+}
+
+.profile-description p {
+    margin-top: 8px;
+}
+
+.profile-settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 233px;
+    margin-top: 40px;
+    padding: 20px;
+    gap: 16px;
+}
+
+.profile-settings p:nth-child(1) {
+    font-size: 1.2rem;
+    line-height: 150%;
+}
+
+.profile-settings p:nth-child(3) {
+    font-size: 1.2rem;
+    line-height: 150%;
+    max-width: 215px;
+}
+
+.profile-image-upload {
+    width: 193px;
+    height: 193px;
+    background: #EFEBFF;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.profile-image-upload svg path {
+    fill: #633CFF;
+}
+
+.profile-image-upload p {
+    color: #633CFF;
+    font-weight: 600;
+}
+
+
+
+/* TABLET ********************************************************************** */
+
+@media (max-width: 1023px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main section:nth-child(1) {
+        display: none;
+    }
+}
+
+/* MOBILE *********************************************************************** */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 0;
+    }
+
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+    }
+
+    header div {
+        gap: 0px;
+    }
+
+    header div button span {
+        display: none;
+    }
+
+    header button:nth-child(4) {
+        padding: 11px 16px;
+    }
+
+    header button:nth-child(4) span {
+        display: none;
+    }
+
+    .preview {
+        display: block;
+    }
+
+    main {
+        margin: 16px;
+    }
+
+    section:nth-child(2) {
+        padding: 24px;
+    }
+
+    main section:nth-child(2) h2 {
+        font-size: 2.4rem;
+    }
+
+    .add-links-description {
+        margin-top: 50.5px;
+    }
+
+    .add-links-description svg {
+        width: 120px;
+        height: 80px;
+    }
+
+    .add-links-instruction {
+        margin-bottom: 30;
+    }
+
+    .save {
+        padding: 16px;
+        margin-top: 24px;
+    }
+
+    .save button {
+        width: 100%;
+    }
+}
