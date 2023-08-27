@@ -1,13 +1,7 @@
-body {
-    color: #737373;
-    font-size: 1.6rem;
-    background: #FAFAFA;
-}
-
 button {
     background-color: inherit;
     font-family: inherit;
-    font-weight: inherit;
+    font-weight: 600;
     color: inherit;
     padding: 11px 27px;
     border-radius: 8px;
@@ -25,6 +19,8 @@ header {
     align-items: center;
     padding: 16px 16px 16px 24px;
     font-weight: 600;
+    margin: 24px 24px 0 24px;
+    border-radius: 12px;
 }
 
 .logo-desktop {
@@ -91,8 +87,8 @@ header button:nth-child(4):active {
 main {
     display: grid;
     grid-template-columns: 4fr 5fr;
-    margin-top: 24px;
     grid-column-gap: 24px;
+    margin: 24px;
 }
 
 section:nth-child(1) {
@@ -104,6 +100,10 @@ section:nth-child(1) {
 
 /* second section---Links */
 
+section {
+    border-radius: 12px;
+}
+
 section:nth-child(2) {
     padding: 40px;
     background: white;
@@ -113,7 +113,6 @@ main h2 {
     color: #333;
     font-size: 3.2rem;
     font-weight: 700;
-    line-height: 150%;
 }
 
 .add-links-customize p {
@@ -163,9 +162,6 @@ main h2 {
 .save button {
     background: #633CFF;
     opacity: 0.25;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
     border: none;
     color: white;
 }
@@ -174,13 +170,16 @@ main h2 {
 
 .profile-details {
     display: none;
+    height: 624px;
 }
 
 .profile-description p {
     margin-top: 8px;
 }
 
-.profile-settings {
+.profile-image-settings {
+    border-radius: 12px;
+    background: #FAFAFA;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -190,14 +189,12 @@ main h2 {
     gap: 16px;
 }
 
-.profile-settings p:nth-child(1) {
+.profile-image-settings p:nth-child(1) {
     font-size: 1.2rem;
-    line-height: 150%;
 }
 
-.profile-settings p:nth-child(3) {
+.profile-image-settings p:nth-child(3) {
     font-size: 1.2rem;
-    line-height: 150%;
     max-width: 215px;
 }
 
@@ -222,6 +219,53 @@ main h2 {
 .profile-image-upload p {
     color: #633CFF;
     font-weight: 600;
+}
+
+.profile-information {
+    margin-top: 24px;
+    background: #FAFAFA;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.profile-information form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profile-information form div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.profile-information label {
+    width: 240px;
+    color: #737373;
+}
+
+.profile-information input {
+    border-radius: 8px;
+    border: 1px solid #D9D9D9;
+    background: white;
+    border-radius: 8px;
+    height: 48px;
+    width: 60%;
+    padding: 12px 16px;
+    border: 1px solid #D9D9D9;
+    color: #333;
+    font-family: inherit;
+}
+
+.profile-information input::placeholder {
+    color: #333;
+    opacity: .5;
+}
+
+.profile-information input:focus {
+    outline: 1px solid #633CFF;
+    box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
 }
 
 
@@ -307,5 +351,14 @@ main h2 {
 
     .save button {
         width: 100%;
+    }
+
+    .profile-image-settings {
+        flex-direction: column;
+    }
+
+    .profile-information form div {
+        flex-direction: column;
+        align-items: start;
     }
 }
