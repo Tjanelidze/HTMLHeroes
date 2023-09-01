@@ -95,7 +95,7 @@ h1 {
   box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
 }
 
-button {
+.login-btn {
   width: 100%;
   display: block;
   padding: 1.1rem 2.7rem;
@@ -104,6 +104,8 @@ button {
   border: none;
   color: white;
   margin: 2.4rem 0;
+  text-align: center;
+  text-decoration: none;
 }
 
 button:hover {
@@ -128,6 +130,30 @@ a.small {
   justify-content: center;
   align-items: center;
   gap: 2px;
+}
+
+.label-error {
+  color: #ff3939;
+}
+
+.input-error input {
+  border-color: #ff3939;
+}
+
+.input-error input:focus,
+.input-error input:active {
+  outline-color: #ff3939;
+}
+.input-error .error-text {
+  color: #ff3939;
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+.error-text {
+  display: none;
 }
 
 @media (max-width: 500px) {
